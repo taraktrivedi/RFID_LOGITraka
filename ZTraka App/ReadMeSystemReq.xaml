@@ -1,0 +1,40 @@
+﻿<Window x:Class="ZTraka_App.ReadMeSystemReq"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="System Requirements" Height="502" Width="691" Name="readMe" WindowStyle="ToolWindow" Icon="./IconImages/readMe.png" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFD2E5F3" Offset="0.326" />
+            <GradientStop Color="#FFE5EDF3" Offset="1.0" />
+        </LinearGradientBrush>
+
+    </Window.Background>
+    <Grid>
+        <TextBlock TextWrapping="WrapWithOverflow" Margin="22,76,26,40" Name="textBlock1" >
+            System Requirements 
+            <LineBreak/>
+            <LineBreak/>
+            Minimum System Requirements: <LineBreak/>
+Microsoft's .NET Framework 3.5 SP1 <LineBreak/>
+Windows Installer 3.1 or above <LineBreak/>
+<LineBreak/>OS requirements:-          <LineBreak/>
+            Windows 7 , <LineBreak/>
+   or Windows XP SP3,<LineBreak/>
+   or Windows Vista SP1 (SP2 and Platform Update recommended) <LineBreak/> <LineBreak/>
+   
+Hardware requirements.<LineBreak/><LineBreak/>
+
+800MHz processor (dual-core recommended)<LineBreak/>
+512MB of RAM
+1024 x 768 screen resolution<LineBreak/>
+200+ MB hard drive space<LineBreak/>
+<LineBreak/>
+
+<LineBreak/>
+Please note that the application may use your hard drive to store temporary files related to some features for reporting and processing files.
+Due to this, actual disk space requirements will depend on the application settings and on the size of the object/file.
+        </TextBlock>
+        <Image Height="66" Margin="22,4,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Left" Width="232" Source="./IconImages/hatraka1.png" />
+        <Button Height="23" Margin="294,0,300,11" Name="btnReadMeOK" VerticalAlignment="Bottom" Click="btnReadMeOK_Click">OK</Button>
+    </Grid>
+</Window>

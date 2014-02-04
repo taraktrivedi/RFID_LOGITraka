@@ -1,0 +1,47 @@
+﻿<Window x:Class="ZTraka_App.ReaderMapProfile"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Reader and Map profile management" Icon=".\IconImages\RFreader.png" Height="521" Width="741" Name="readerMapManageWindow" Loaded="readerMapManageWindow_Loaded" WindowStartupLocation="CenterScreen">
+    <Grid Height="472">
+        <TextBlock Background="LightPink" Height="32.04" Margin="276,10.96,232,0" Name="textBlockSearchWarning" Text="" TextWrapping="WrapWithOverflow" VerticalAlignment="Top" Visibility="Hidden" />
+        <Button Height="24" HorizontalAlignment="Left" Margin="195,10,0,0" Name="btnsearchBoxTag" TabIndex="2" VerticalAlignment="Top" Width="62" IsDefault="True" Click="btnsearchBoxTag_Click">Search</Button>
+        <TextBox BorderBrush="Black" BorderThickness="2" Height="25" HorizontalAlignment="Left" HorizontalContentAlignment="Left" IsReadOnly="False" Margin="10,10,0,0" MaxLength="50" Name="textBoxSearchBoxTag" TabIndex="1" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="166" Foreground="LightSlateGray" LostFocus="textBoxSearchBoxTag_LostFocus" GotFocus="textBoxSearchBoxTag_GotFocus">&lt;Enter reader ID or floor ID&gt;</TextBox>
+        <TabControl Margin="10,62.96,12,57" Name="tabControl1">
+            <TabItem Header="Asset Details" Name="tabItemReaderMain">
+                <Grid Height="328" Width="691">
+                    <TextBox Background="LightSlateGray" FontSize="13" FontWeight="Bold" Foreground="White" Height="23.04" HorizontalAlignment="Left" IsReadOnly="True" Margin="122,10,0,0" MaxLength="10" MaxLines="1" Name="textBoxReaderID" TabIndex="3" VerticalAlignment="Top" Width="120" />
+                    <Label Height="23.04" Margin="16,10,601,0" Name="lblReaderID" VerticalAlignment="Top">Reader ID</Label>
+                    <TextBox Height="23.04" HorizontalAlignment="Left" IsReadOnly="True" Margin="122,54,0,0" MaxLength="10" Name="textBoxFloorID" TabIndex="4" VerticalAlignment="Top" Width="120" />
+                    <Label Height="37" HorizontalAlignment="Left" Margin="16,54,0,0" Name="lblFloorID" VerticalAlignment="Top" Width="70">Floor ID</Label>
+                    <TextBox Height="23.04" HorizontalAlignment="Left" IsReadOnly="True" Margin="122,97,0,0" MaxLength="20" Name="textBoxLocationID" TabIndex="5" VerticalAlignment="Top" Width="120" />
+                    <Label Height="23.04" HorizontalAlignment="Left" Margin="16,97,0,0" Name="lblLocationID" VerticalAlignment="Top" Width="91">Location ID</Label>
+                    <TextBox Height="23.04" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,10,34,0" MaxLength="0" Name="textBoxReaderInfo" TabIndex="8" VerticalAlignment="Top" Width="224" TextWrapping="WrapWithOverflow" />
+                    <Label Height="23.04" Margin="279,10,282,0" Name="lblReaderInfo" VerticalAlignment="Top">Reader Info</Label>
+                    <TextBox Height="23.04" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,54,129,0" MaxLength="40" Name="textBoxRoomsPerFloor" TabIndex="9" VerticalAlignment="Top" Width="129" />
+                    <Label Height="37" Margin="279,54,295,0" Name="lblRoomsPerFloor" VerticalAlignment="Top">Rooms Per Floor</Label>
+                    <Label HorizontalAlignment="Left" Margin="16,136,0,156" Name="lblMapFloor" Width="91">Map Floor</Label>
+                    <TextBox Height="67" HorizontalAlignment="Left" IsReadOnly="True" Margin="122,0,0,79" MaxLength="50" Name="textBoxAssetInfoDescr" TabIndex="7" TextWrapping="WrapWithOverflow" VerticalAlignment="Bottom" Width="126" />
+                    <Label Height="31" HorizontalAlignment="Left" Margin="16,0,0,115" Name="lblAssetInfoDesc" VerticalAlignment="Bottom" Width="100">Asset Info Desc</Label>
+                    <TextBox Height="23.04" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,95,118,0" MaxLength="10" Name="textBoxAssetsPerFloor" TabIndex="10" VerticalAlignment="Top" Width="140" />
+                    <Label Height="31" Margin="279,97,312,0" Name="lblAssetsPerFloor" VerticalAlignment="Top">Assets Per Floor</Label>
+                    <TextBox Height="23.04" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,132,34,0" MaxLength="30" Name="textBoxMapComments" TabIndex="11" VerticalAlignment="Top" Width="224" />
+                    <Label Margin="279,134,312,154" Name="lblMapComments">Map Comments</Label>
+                    <Label Height="33" Margin="279,0,312,115" Name="lblReaderImage" VerticalAlignment="Bottom">Reader Image</Label>
+                    <Border BorderBrush="Black" BorderThickness="2" Height="114" HorizontalAlignment="Right" Margin="0,0,126,32" Name="borderAssetImage" VerticalAlignment="Bottom" Width="128">
+                        <Image Height="106" Name="imageReaderPic" Source=".\IconImages\RFreader.png" Stretch="Fill" Width="122" />
+                    </Border>
+                    <ComboBox Height="23.04" HorizontalAlignment="Left" Margin="122,136,0,0" Name="cmbMapFloors" TabIndex="6" VerticalAlignment="Top" Width="120" SelectionChanged="cmbMapFloors_SelectionChanged" BorderBrush="BlueViolet" IsEnabled="False">
+                        <ComboBoxItem Name="cbiFirst">First</ComboBoxItem>
+                        <ComboBoxItem Name="cbiSecond">Second</ComboBoxItem>
+                        <ComboBoxItem Name="cbiThird">Third</ComboBoxItem>
+                    </ComboBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Button HorizontalAlignment="Left" Margin="99,0,0,12" Name="btnEditReaderInfo" TabIndex="13" Width="105" Height="23" VerticalAlignment="Bottom" Click="btnEditReaderInfo_Click">Edit Reader Info</Button>
+        <Button HorizontalAlignment="Left" Margin="219,0,0,12" Name="btnAddNewReader" TabIndex="14" Width="102" Height="23" VerticalAlignment="Bottom" Click="btnAddNewReader_Click">Add New Reader</Button>
+        <Button IsEnabled="False" Margin="341,0,251,12" Name="btnDeleteReader" TabIndex="15" Height="23" VerticalAlignment="Bottom" Click="btnDeleteReader_Click">Delete Reader</Button>
+        <Button HorizontalAlignment="Right" IsCancel="False" Margin="0,0,154,12" Name="btnCancel" TabIndex="16" Width="76" Height="23" VerticalAlignment="Bottom" Click="btnCancel_Click">Cancel</Button>
+        <TextBlock Background="LightYellow" FontSize="11" FontWeight="Bold" Height="21" HorizontalAlignment="Right" Margin="0,14,22,0" Name="textBlockReaderMapsInfoNotifyMessage" Text="alertNotifyMessage" TextAlignment="Center" TextWrapping="WrapWithOverflow" VerticalAlignment="Top" Visibility="Hidden" Width="183" />
+    </Grid>
+</Window>

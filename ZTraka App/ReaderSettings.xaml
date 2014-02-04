@@ -1,0 +1,35 @@
+﻿<Window x:Class="ZTraka_App.ReaderSettings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Reader Settings" Height="510.858" Width="607.212" WindowStyle="ToolWindow" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Icon=".\IconImages\settings.png">
+    <Grid Height="477.225" Width="591.759">
+        <GroupBox Header="Reader Mode" Margin="12,12,12,0" Name="groupBoxReaderMode" Height="124" VerticalAlignment="Top">
+            <Grid>
+                <RadioButton Margin="119,10,0,0" Name="radioButtonMultipleRead" Height="16.04" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" IsChecked="False" TabIndex="2">Multiple Reads</RadioButton>
+                <RadioButton Height="16.362" HorizontalAlignment="Left" Margin="10,10,0,0" Name="radioButtonSingleRead" VerticalAlignment="Top" Width="85.446" TabIndex="1">Single Read</RadioButton>
+                <TextBox Margin="6,32,6,6" Name="textBox1" TextWrapping="WrapWithOverflow">Note: A single read mode indicates that the reader will scan for only one tag to detect the asset. This is helpful if you wish to check tags one at a time. The multiple reads mode will scan all the assets/tags. For both these modes, there is a one time mode and a continuous mode available.</TextBox>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Continuous Mode Settings" Margin="12,151.803,12,192.708" Name="groupBoxCmodeSet" IsEnabled="True">
+            <Grid Height="113.625" Width="556.308">
+                <Label Height="29" Margin="0,8.181,213.616,0" Name="lblSelectReadTime" VerticalAlignment="Top">Select how often you wish to scan in continuous mode</Label>
+                <TextBox HorizontalAlignment="Left" Margin="79.587,43.29,0,52.281" Name="textBoxtimePeriod" Width="28.971" TabIndex="3" PreviewTextInput="textBoxtimePeriod_PreviewTextInput" Padding="0" HorizontalContentAlignment="Left" VerticalContentAlignment="Top">20</TextBox>
+                <Label HorizontalAlignment="Left" Margin="114.898,41.814,0,54.54" Name="lblSeconds" Width="19.998" Padding="0">sec</Label>
+                <Label Margin="10,41.814,0,48.177" Name="lblPeriod" HorizontalAlignment="Left" Width="63.63" Padding="0">Once every</Label>
+                <CheckBox Margin="9.999,0,0,26.361" Name="checkBoxAutoStop" HorizontalAlignment="Left" Width="140" Height="16.362" VerticalAlignment="Bottom" TabIndex="4">Enable Auto stop after</CheckBox>
+                <TextBox Margin="155.439,0,0,18.18" Name="textBoxAutoStopReadings" HorizontalAlignment="Left" Width="28.179" Height="24.543" VerticalAlignment="Bottom" TabIndex="5" PreviewTextInput="textBoxAutoStopReadings_PreviewTextInput" Padding="0" VerticalContentAlignment="Top" HorizontalContentAlignment="Center">100</TextBox>
+                <Label Margin="189.072,0,0,26.361" Name="lblreadings" Height="15.453" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="48.596" Padding="0">readings</Label>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Beep Control Settings" Margin="12,0,12,48.177" Name="groupBoxBeepControl" Height="130" VerticalAlignment="Bottom">
+            <Grid Width="553.581">
+                <Label Margin="19.026,6,240.948,0" Name="lblBeep" Padding="1" Height="21.816" VerticalAlignment="Top">Choose your beep control settings for the reader</Label>
+                <RadioButton Margin="19.026,79.897,414.877,0" Name="radioButtonAuto" TabIndex="8" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Height="17.819" VerticalAlignment="Top">Auto</RadioButton>
+                <RadioButton Margin="19.026,33.568,414.877,0" Name="radioButtonYes" TabIndex="6" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Height="17.316" VerticalAlignment="Top">Beep Enabled</RadioButton>
+                <RadioButton Margin="19.026,57.423,414.877,0" Name="radioButtonNo" IsChecked="False" TabIndex="7" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Height="16.65" VerticalAlignment="Top">Beep Disabled</RadioButton>
+            </Grid>
+        </GroupBox>
+        <Button Height="23" Margin="191.799,0,0,10.908" Name="btnOk" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="74.777" Click="btnOk_Click" TabIndex="9">OK</Button>
+        <Button Height="23" Margin="0,0,202.707,10.908" Name="btnCancel" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="74.777" Click="btnCancel_Click" TabIndex="10">Cancel</Button>
+    </Grid>
+</Window>

@@ -1,0 +1,35 @@
+﻿<Window x:Class="ZTraka_App.Register"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Register Product" Height="394" Width="481" WindowStyle="ToolWindow" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Icon= ".\IconImages\registerActivate.png" ResizeMode="CanMinimize">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFD2E5F3" Offset="0.326" />
+            <GradientStop Color="#FFE5EDF3" Offset="1.0" />
+        </LinearGradientBrush>
+    </Window.Background>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="168*" />
+            <RowDefinition Height="32*" />
+            <RowDefinition Height="156*" />
+        </Grid.RowDefinitions>
+        <Image Margin="21,12,0,0" Name="image1" Stretch="Fill" Source=".\IconImages\hatraka1.png" HorizontalAlignment="Left" Width="141" Height="56" VerticalAlignment="Top" />
+        <Image Margin="21,0,0,42" Name="image2" Source=".\IconImages\ZigTraka.png" Stretch="Fill" HorizontalAlignment="Left" Width="43" Height="41" VerticalAlignment="Bottom" />
+        <Grid Margin="168,12,12,0" Name="grid1" Height="70" VerticalAlignment="Top">
+            <TextBlock TextWrapping="WrapWithOverflow" Text="Enter registration key along with company information and email address for activating this application. " Margin="0,6" FontSize="12" TextDecorations="None" Background="DarkCyan" Foreground="White" TextAlignment="Center" FontWeight="Bold" />
+        </Grid>
+        <Label Margin="115,0,0,40" Name="lblRegisterUsername" Height="28" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="64">Username:</Label>
+        <Label Margin="84,0,0,6" Name="lblRegistrationCompany" Height="28" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="106">Company Name:</Label>
+        <Label Margin="70,3,0,0" Name="lblRegistrationCode" HorizontalAlignment="Left" Width="120" Height="28" VerticalAlignment="Top" Grid.Row="2">Registration Key:</Label>
+        <TextBox Height="24" Margin="210,0,125,44" Name="textBoxRegistrationUsername" VerticalAlignment="Bottom" TabIndex="2" />
+        <TextBox Margin="210,0,125,6" Name="textBoxRegistrationCompany" Height="24" VerticalAlignment="Bottom" TabIndex="3" />
+        <TextBox Margin="210,7,113,0" Name="textBoxRegistrationCode" TextDecorations="None" AutoWordSelection="False" AcceptsReturn="False" TabIndex="5" Background="LightYellow" Height="24" VerticalAlignment="Top" Grid.Row="2" BorderBrush="White" BorderThickness="2" MaxLines="1" MaxLength="19" FontWeight="Bold" CharacterCasing="Normal"></TextBox>
+        <Label Margin="98,0,0,3" Name="lblRegistrationEmail" HorizontalAlignment="Left" Width="92" Grid.Row="1">Email Address</Label>
+        <Button Margin="226,75,125,58" Name="btnRegister" Click="btnRegister_Click" TabIndex="6" Grid.Row="2">Activate Product</Button>
+        <Button Margin="0,75,36,58" Name="btnCancelRegistration" Click="btnCancelRegistration_Click" TabIndex="7" Grid.Row="2" HorizontalAlignment="Right" Width="75">Cancel</Button>
+        <TextBox Margin="210,5,125,3" Name="textBoxRegistrationEmail" TabIndex="4" SnapsToDevicePixels="False" Grid.Row="1" />
+        <Button Grid.Row="2" Margin="70,75,0,58" Name="btnRequestKeys" Click="btnRequestKeys_Click" HorizontalAlignment="Left" Width="146">Register and Request Keys</Button>
+    </Grid>
+</Window>

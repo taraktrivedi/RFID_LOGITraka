@@ -1,0 +1,69 @@
+﻿<Window x:Class="ZTraka_App.UserOptions"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="User Options" Height="336" Width="668" WindowStyle="ToolWindow" Icon="./IconImages/userSettings.png" WindowStartupLocation="CenterScreen" Name="userOptionWindow" Loaded="userOptionWindow_Loaded" ResizeMode="NoResize">
+    <Grid>
+        <TabControl Name="tabControlUserOptions" Margin="0,0,0,42">
+            <TabItem Header="General Profile" Name="tabItemGeneralProfile">
+                <Grid>
+                    <TextBox Margin="110,14,0,0" Name="textBoxGPUserID" Height="23.04" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Background="LightSlateGray" Foreground="White" FontWeight="Bold" FontSize="13" IsReadOnly="True" TabIndex="1"></TextBox>
+                    <Label HorizontalAlignment="Left" Margin="23,14,0,0" Name="lblGPuserID" Width="57" Height="23.04" VerticalAlignment="Top">User ID</Label>
+                    <TextBox Height="23.04" HorizontalAlignment="Left" Margin="110,58,0,0" Name="textBoxGPFirstName" VerticalAlignment="Top" Width="120" IsReadOnly="True" TabIndex="2" MaxLength="12" />
+                    <Label Height="23.04" HorizontalAlignment="Left" Margin="23,58,0,0" Name="lblGPFirstName" VerticalAlignment="Top" Width="70">First Name</Label>
+                    <TextBox HorizontalAlignment="Left" Margin="110,101,0,81" Name="textBoxGPLastName" Width="120" IsReadOnly="True" TabIndex="3" MaxLength="12" />
+                    <Label HorizontalAlignment="Left" Margin="23,101,0,81" Name="lblGPLastName" Width="70">Last Name</Label>
+                    <TextBox Height="23.04" HorizontalAlignment="Right" Margin="0,14,143,0" Name="textBoxGPContact" VerticalAlignment="Top" Width="120" IsReadOnly="True" TabIndex="4" MaxLength="50" />
+                    <Label Height="23.04" Margin="286,14,303.485,0" Name="lblGPContact" VerticalAlignment="Top" Padding="1" VerticalContentAlignment="Center">Contact</Label>
+                    <TextBox Height="23.04" HorizontalAlignment="Right" Margin="0,60,143,0" Name="textBoxGPEmail" VerticalAlignment="Top" Width="120" IsReadOnly="True" TabIndex="5" MaxLength="30" />
+                    <Label Height="23.04" Margin="286,60,293,0" Name="lblGPEmail" VerticalAlignment="Top" Padding="2" VerticalContentAlignment="Center">Email</Label>
+                    <Button Height="23" HorizontalAlignment="Left" Margin="149,0,0,15" Name="btnEdit" VerticalAlignment="Bottom" Width="75" TabIndex="6" Click="btnEdit_Click">Edit Profile</Button>
+                    <Button Height="23" Margin="252,0,250,15" Name="btnAddNew" VerticalAlignment="Bottom" TabIndex="8" Click="btnAddNew_Click">Add New Profile</Button>
+                    <TextBlock Background="LightPink" Margin="286,101,102,72" Name="textBlockProfileWarning" Text="" TextWrapping="WrapWithOverflow" Visibility="Hidden" />
+                    <Label Height="28" HorizontalAlignment="Right" Margin="0,0,6,10" Name="lblShowMyProfile" VerticalAlignment="Bottom" Width="96">
+                        <Hyperlink Name="showmyprofileHL" Click="userOptionWindow_Loaded">
+                            Show my profile
+                        </Hyperlink></Label>
+                    <TextBlock Background="LightYellow" FontSize="11" FontWeight="Bold" Height="21" HorizontalAlignment="Right" Margin="0,16.04,6,0" Name="textBlockUserNotifyMessage" Text="userNotifyMessage" TextAlignment="Center" TextWrapping="WrapWithOverflow" VerticalAlignment="Top" Visibility="Hidden" Width="120.857" />
+                    <Label Height="21" HorizontalAlignment="Right" Margin="0,12.44,269,0" Name="labelPlus91" VerticalAlignment="Top" Width="29" Padding="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">+91</Label>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Password Management" Name="tabItemPassword" TabIndex="2147483647">
+                <Grid Width="640">
+                    <Label Height="23.04" HorizontalAlignment="Left" Margin="10,10,0,0" Name="lblOldPassword" VerticalAlignment="Top" Width="90">Old Password</Label>
+                    <Label Height="23.04" HorizontalAlignment="Left" Margin="10,57,0,0" Name="lblNewPassword" VerticalAlignment="Top" Width="90">New Password</Label>
+                    <Label HorizontalAlignment="Left" Margin="10,101,0,81" Name="lblConfirmNewPassword" Width="134">Confirm New Password</Label>
+                    <TextBlock HorizontalAlignment="Right" Margin="0,10.04,45,0" Name="textBlockPassword" Width="259" Text="Note: Make sure your password is atleast 8 characters long. Your password should contain atleast one alphabet and one number." TextWrapping="WrapWithOverflow" Height="56" VerticalAlignment="Top" Background="LightBlue" />
+                    <Button Height="23" HorizontalAlignment="Left" Margin="150,0,0,25" Name="btnChangePassword" VerticalAlignment="Bottom" Width="120" TabIndex="4" Click="btnChangePassword_Click">Change Password</Button>
+                    <PasswordBox Height="23" Margin="150,10.04,0,0" Name="passwordBoxOldPassword" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" TabIndex="1" />
+                    <PasswordBox Height="23" HorizontalAlignment="Left" Margin="150,57,0,0" Name="passwordBoxNewPass" VerticalAlignment="Top" Width="120" TabIndex="2" />
+                    <PasswordBox HorizontalAlignment="Left" Margin="150,101,0,96" Name="passwordBoxConfirmNewPass" Width="120" TabIndex="3" Height="23" />
+                    <TextBlock Background="LightPink" HorizontalAlignment="Right" Margin="0,91.02,45,79" Name="textBlockPasswordWarning" Text="" TextWrapping="WrapWithOverflow" Width="259" Visibility="Hidden" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Roles and user management" Name="tabItemPrivileges">
+                <Grid Width="641" Height="229">
+                    <Label Margin="10,105,0,99" Name="lblUserDept" HorizontalAlignment="Left" Width="62" Padding="0" VerticalContentAlignment="Center">User Dept</Label>
+                    <Label Height="23.04" Margin="279,58,292,0" Name="lblUserRoleID" VerticalAlignment="Top" Padding="0">Role ID</Label>
+                    <TextBox Margin="86,105,0,101" Name="textBoxUserDept" HorizontalAlignment="Left" Width="120" IsReadOnly="True" TabIndex="3" MaxLength="10" />
+                    <Label Height="23.04" HorizontalAlignment="Left" Margin="10,58,0,0" Name="lblUserRole" VerticalAlignment="Top" Width="62" Padding="0" VerticalContentAlignment="Center">User Role</Label>
+                    <ComboBox Height="23" Margin="87,56,0,0" Name="cmbUserRole" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" IsReadOnly="False" TabIndex="2" SelectionChanged="cmbUserRole_SelectionChanged" IsDropDownOpen="False" IsEnabled="False" IsEditable="False">
+                        <ComboBoxItem Name="cbiAD01">ADMIN</ComboBoxItem>
+                        <ComboBoxItem Name="cbiAD02">ADMIN2</ComboBoxItem>
+                        <ComboBoxItem Name="cbiVORES01">Restricted</ComboBoxItem>
+                    </ComboBox>
+                    <TextBox Height="23" HorizontalAlignment="Right" Margin="0,56,166,0" Name="textBoxRoleID" VerticalAlignment="Top" Width="120" IsReadOnly="True" />
+                    <TextBlock Background="White" Margin="279,0,98,61" Name="textBlockRoles" Text="Note: The roles and privileges of users can only be changed by admins" TextWrapping="WrapWithOverflow" Height="38.04" VerticalAlignment="Bottom" />
+                    <Label Height="23" HorizontalAlignment="Left" Margin="18,8.52,0,0" Name="lblUserIDselect" VerticalAlignment="Top" Width="54" Grid.IsSharedSizeScope="False" Padding="0" VerticalContentAlignment="Center">User ID</Label>
+                    <TextBox Background="LightSlateGray" FontSize="13" FontWeight="Bold" Foreground="White" Height="23.04" HorizontalAlignment="Left" IsReadOnly="True" Margin="86,10.924,0,0" Name="textBoxUserIDRights" VerticalAlignment="Top" Width="120" TabIndex="1" MaxLength="8" MaxLines="1" />
+                    <Button Height="23" Margin="241,10,0,0" Name="btnSearchUserID" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75" IsEnabled="False" Click="btnSearchUserID_Click">Search User</Button>
+                    <Button Height="23" HorizontalAlignment="Left" Margin="87,0,0,17" Name="btnEditPrivileges" VerticalAlignment="Bottom" Width="83" TabIndex="4" Click="btnEditPrivileges_Click">Edit Privileges</Button>
+                    <Button Height="23" Margin="205,0,0,17" Name="btnManageOtherUsers" VerticalAlignment="Bottom" TabIndex="5" Click="btnManageOtherUsers_Click" HorizontalAlignment="Left" Width="92">Manage Users</Button>
+                    <Button Height="23" HorizontalAlignment="Right" Margin="0,0,234,17" Name="btnDeleteProfile" TabIndex="7" VerticalAlignment="Bottom" Width="81" Click="btnDeleteProfile_Click" IsEnabled="False">Delete Profile</Button>
+                    <TextBlock Background="LightBlue" Height="31.924" Margin="0,10,192,0" Name="textBlockSearchUserInfo" Text="Enter user ID and hit Search User" TextWrapping="WrapWithOverflow" VerticalAlignment="Top" HorizontalAlignment="Right" Width="114" Visibility="Hidden" />
+                    <TextBlock Background="LightYellow" Height="23" HorizontalAlignment="Right" Margin="0,8.52,6,0" Name="textBlockuserRolesNotifyMessage" Text="userRolesNotifyMessage" TextWrapping="WrapWithOverflow" VerticalAlignment="Top" Visibility="Hidden" Width="154" FontWeight="Bold" TextAlignment="Center" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Button Height="23" Margin="262.515,0,308.485,13.332" Name="btnCancelChanges" VerticalAlignment="Bottom" TabIndex="10" Click="btnCancelChanges_Click">Exit</Button>
+    </Grid>
+</Window>

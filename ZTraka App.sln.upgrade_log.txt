@@ -1,0 +1,15 @@
+----------------------------------------------------------------------------------------------
+C:\Users\trivedi\Documents\Visual Studio 2008\Projects\ZTraka App\ZTraka App\ZTraka App.csproj
+----------------------------------------------------------------------------------------------
+Setting <ExpressionBlendVersion> value to '4.0.20901.0'
+Updating ToolsVersion from '3.5' to '4.0'
+Saving file
+
+
+--------------------------------------------------------------------------------
+C:\Users\trivedi\Documents\Visual Studio 2008\Projects\ZTraka App\ZTraka App.sln
+--------------------------------------------------------------------------------
+Setting solution format header to 'Microsoft Visual Studio Solution File, Format Version 11.00'
+Saving file
+
+

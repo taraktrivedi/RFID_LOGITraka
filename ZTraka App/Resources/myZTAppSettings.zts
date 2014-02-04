@@ -1,0 +1,52 @@
+%%%%%%%%%%%%%%%%HATraka app settings file%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Warning: Do not modify the settings file unless you are sure of what changes are to be done!
+%% App Settings file created on: 11/25/2012 2:30:14 PM 
+
+%%%%%%%%%%%Reader connections%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+numberOfConnections=3;
+readerConnection=connectOne [default]#Ethernet (TCP/IP)#192.168.0.178#True;
+readerConnection=connectTwo#COM5#9600 (default)#False;
+readerConnection=(?);
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5%%%%%%%%%%%
+
+%%%%%%%%%%%Reader settings%%%%%%%%%%%%%%%%%%%%%%%%%%
+tIntervalSec=20;
+autoStopReadings=100;
+readerMode=2;
+beepControl=2;
+ControlType=2;
+isAutoStopEnabled=False;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%Alert Notification settings%%%%%%%%%%%%%%
+capAssetsInOut=True;
+capAssetTagExpiry=True;
+capAssetMaintenanceDue=True;
+logsScannedAssets=True;
+logsCAP=True;
+assetUpdates=False;
+assetAdded=False;
+assetDeleted=False;
+userUpdates=False;
+userAdded=False;
+userDeleted=False;
+readerUpdates=False;
+readerAdded=False;
+readerDeleted=False;
+sendEmailUser=False;
+sendEmailAdmin=False;
+sendSMSUser=False;
+sendSMSAdmin=False;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%% App Theme Select %%%%%%%%%%%%%%%%%%%%%%%%%
+skinSelector=0;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% App System settings %%%%%%%%%%%%%%%%%%%%%%
+minimizeInTray=True;
+shutdownAppAfterXHours=NA;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

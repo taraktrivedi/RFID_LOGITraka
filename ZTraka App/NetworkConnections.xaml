@@ -1,0 +1,59 @@
+﻿<Window x:Class="ZTraka_App.NetworkConnections"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:dg="clr-namespace:Microsoft.Windows.Controls.Primitives;assembly=WPFToolkit" 
+    Title="Check Network Connections" Height="347" Width="603" Icon=".\IconImages\testNetwork.png" Name="checkNetworkConn" WindowStartupLocation="CenterScreen" Loaded="checkNetworkConn_Loaded" xmlns:my3="http://schemas.microsoft.com/wpf/2008/toolkit">
+    
+    
+    <Grid>
+        <my3:DataGrid AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" Block.TextAlignment="Center" HeadersVisibility="Column" AlternationCount="2" ItemsSource="{Binding}" IsReadOnly="True" AlternatingRowBackground="LavenderBlush" Margin="21,12,12,41" Name="dgNetworkConnections" xmlns:my3="http://schemas.microsoft.com/wpf/2008/toolkit" GridLinesVisibility="Vertical">
+            <my3:DataGrid.Columns>
+
+                <my3:DataGridTextColumn Header="Sr.No" IsReadOnly="True" Width="Auto" Binding ="{Binding Path = sr_no }" >
+                    <my3:DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="dg:DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        </Style>
+                    </my3:DataGridTextColumn.HeaderStyle>
+                </my3:DataGridTextColumn>
+
+                <my3:DataGridTextColumn Header="Protocol" IsReadOnly="True" Width="Auto" Binding ="{Binding Path = protocol }"  >
+                    <my3:DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="dg:DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        </Style>
+                    </my3:DataGridTextColumn.HeaderStyle>
+                </my3:DataGridTextColumn>
+
+                <my3:DataGridTextColumn Header="Local Address" IsReadOnly="True" Width="*" Binding="{Binding  Path=local_address}" >
+                    <my3:DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="dg:DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        </Style>
+                    </my3:DataGridTextColumn.HeaderStyle>
+                </my3:DataGridTextColumn>
+
+
+                <my3:DataGridTextColumn Header="Remote Address" IsReadOnly="True" Width="*" Binding="{Binding  Path=remote_address}" >
+                    <my3:DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="dg:DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        </Style>
+                    </my3:DataGridTextColumn.HeaderStyle>
+                </my3:DataGridTextColumn>
+
+
+                <my3:DataGridTextColumn Header="State" IsReadOnly="True" Width="*" Binding="{Binding  Path=state}" >
+                    <my3:DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="dg:DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        </Style>
+                    </my3:DataGridTextColumn.HeaderStyle>
+                </my3:DataGridTextColumn>
+
+            </my3:DataGrid.Columns>
+        </my3:DataGrid>
+        <Button Height="23" HorizontalAlignment="Left" Margin="201,0,0,11" Name="btnRefresh" VerticalAlignment="Bottom" Width="75" Click="btnRefresh_Click">Refresh</Button>
+        <Button Height="23" HorizontalAlignment="Right" Margin="0,0,190,12" Name="btnExit" VerticalAlignment="Bottom" Width="75" Click="btnExit_Click">Exit</Button>
+    </Grid>
+</Window>

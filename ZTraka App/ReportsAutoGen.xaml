@@ -1,0 +1,29 @@
+﻿<Window x:Class="ZTraka_App.ReportsAutoGen"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dg="clr-namespace:Microsoft.Windows.Controls.Primitives;assembly=WPFToolkit"
+    xmlns:rv="clr-namespace:Microsoft.Reporting.WinForms;assembly=Microsoft.ReportViewer.WinForms"             
+    xmlns:DV="clr-namespace:System.Windows.Controls.DataVisualization;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+    xmlns:DVC="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+
+    Title="Reports Auto Generated" Height="684" Width="820" Name="reportsAuto" WindowStartupLocation="CenterScreen" WindowStyle="SingleBorderWindow" Loaded="reportsAuto_Loaded" Icon=".\IconImages\reportsAutoGen.png">
+    <Grid Width="810" Height="655">
+        <TabControl Name="tabControl1">
+            <TabItem Header="Reports" Name="tbiReports">
+                <Grid Height="627" Width="848">
+                <WindowsFormsHost Name="windowsFormsHost1" Margin="0,57,51,0">
+                    <rv:ReportViewer x:Name="_reportViewer" />
+                </WindowsFormsHost>
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="13,26,0,0" Name="cmbSelectCategory" VerticalAlignment="Top" Width="120">
+                        <ComboBoxItem>Assets</ComboBoxItem>
+                        <ComboBoxItem>Users</ComboBoxItem>
+                        <ComboBoxItem>Maps Reader Info</ComboBoxItem>
+                    </ComboBox>
+                    <Button Height="34" HorizontalAlignment="Left" Margin="172,17,0,0" Name="btnGenerateReport" VerticalAlignment="Top" Width="109" Click="btnGenerateReport_Click">Generate Report</Button>
+                    <TextBlock Background="BlanchedAlmond" Height="21" Margin="309,26,271,0" Name="textBlockSelectWarning" VerticalAlignment="Top" Visibility="Hidden" Text="Select a category to generate a report" />
+                    <Label Height="24" HorizontalAlignment="Left" Margin="24,3,0,0" Name="lblSearchCategory" Padding="2" VerticalAlignment="Top" Width="93">Select category</Label>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

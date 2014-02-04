@@ -1,0 +1,74 @@
+﻿<Window x:Class="ZTraka_App.tagOptions"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Tag Options" Height="560" Width="714" Name="tgOptions" WindowStartupLocation="CenterScreen" Loaded="tgOptions_Loaded" Icon=".\IconImages\tagSettings.png" >
+    <Grid>
+        <Button Height="23" HorizontalAlignment="Left" Margin="148,0,0,46" Name="btnEditAssetInfo" TabIndex="13" VerticalAlignment="Bottom" Width="88" Click="btnEditAssetInfo_Click">Edit Asset Info</Button>
+        <Button Height="23" Margin="251,0,339,46" Name="btnAddNewAsset" TabIndex="14" VerticalAlignment="Bottom" Click="btnAddNewAsset_Click">Add New Asset</Button>
+        <TextBlock Background="LightPink" Height="32.04" Margin="287,12,233,0" Name="textBlockSearchWarning" Text="" TextWrapping="WrapWithOverflow" VerticalAlignment="Top" Visibility="Hidden" />
+        <Button Height="24" HorizontalAlignment="Left" Margin="193,12.04,0,0" Name="btnsearchBoxTag" VerticalAlignment="Top" Width="62" Click="btnsearchBoxTag_Click" TabIndex="2" IsDefault="True">Search</Button>
+        <TextBox Height="25" IsReadOnly="False" Margin="21,11.04,0,0" MaxLength="50" Name="textBoxSearchBoxTag" TabIndex="1" VerticalAlignment="Top" LostFocus="textBoxSearchBoxTag_LostFocus" GotFocus="textBoxSearchBoxTag_GotFocus" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Width="151" Foreground="LightSlateGray">&lt;Enter asset ID or tag ID&gt;</TextBox>
+        <TabControl Margin="21,64,12,97" Name="tabControl1">
+            <TabItem Header="Asset Details" Name="tabItemAssetMain">
+                <Grid Height="334" Width="652">
+                    <TextBox Background="LightSlateGray" FontSize="13" FontWeight="Bold" Foreground="White" Height="23.04" HorizontalAlignment="Left" IsReadOnly="True" Margin="122,10,0,0" Name="textBoxAssetID" TabIndex="3" VerticalAlignment="Top" Width="120" MaxLength="10" MaxLines="1" />
+                    <Label Height="23.04" HorizontalAlignment="Left" Margin="16,10,0,0" Name="lblAssetID" VerticalAlignment="Top" Width="57">Asset ID</Label>
+                    <TextBox Height="23.04" HorizontalAlignment="Left" IsReadOnly="True" Margin="122,54,0,0" MaxLength="10" Name="textBoxTagID" TabIndex="4" VerticalAlignment="Top" Width="120" />
+                    <Label HorizontalAlignment="Left" Margin="16,54,0,0" Name="lbltagID" Width="70" Height="37" VerticalAlignment="Top">Tag ID</Label>
+                    <TextBox Height="23.04" HorizontalAlignment="Left" IsReadOnly="True" Margin="122,97,0,0" MaxLength="20" Name="textBoxAssetLocation" TabIndex="5" VerticalAlignment="Top" Width="120" />
+                    <Label Height="23.04" HorizontalAlignment="Left" Margin="16,97,0,0" Name="lblAssetLocation" VerticalAlignment="Top" Width="91">Asset Location</Label>
+                    <TextBox Height="23.04" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,10,90,0" MaxLength="10" Name="textBoxAssetModel" TabIndex="8" VerticalAlignment="Top" Width="120" />
+                    <Label Height="23.04" Margin="279,10,216,0" Name="lblAssetModel" VerticalAlignment="Top">Asset Model</Label>
+                    <TextBox Height="23.04" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,54,73,0" MaxLength="40" Name="textBoxAssetTagCreated" TabIndex="9" VerticalAlignment="Top" Width="137" />
+                    <Label Margin="279,54,252,0" Name="lblAssetTagCreated" Height="37" VerticalAlignment="Top">Asset Tag Created</Label>
+                    <Label HorizontalAlignment="Left" Margin="16,136,0,0" Name="lblAssetCategory" Width="91" Padding="1" Height="23.04" VerticalAlignment="Top">Asset Category</Label>
+                    <TextBox Height="67" HorizontalAlignment="Left" IsReadOnly="True" Margin="122,0,0,83" MaxLength="50" Name="textBoxAssetDescr" TabIndex="7" VerticalAlignment="Bottom" Width="126" TextWrapping="WrapWithOverflow" />
+                    <Label Height="31" HorizontalAlignment="Left" Margin="6,0,0,119" Name="lblAssetDesc" VerticalAlignment="Bottom" Width="110">Asset Description</Label>
+                    <TextBox Height="23.04" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,95,90,0" MaxLength="10" Name="textBoxAssetQuantity" TabIndex="10" VerticalAlignment="Top" Width="120" />
+                    <Label Height="31" Margin="279,97,198,0" Name="lblAssetQuantity" VerticalAlignment="Top">Asset Quantity</Label>
+                    <TextBox Height="23.04" HorizontalAlignment="Right" IsReadOnly="True" Margin="0,132,90,0" MaxLength="30" Name="textBoxAssetValue" TabIndex="11" VerticalAlignment="Top" Width="120" />
+                    <Label Height="23.04" Margin="279,134,213,0" Name="lblAssetValue" VerticalAlignment="Top">Asset Value</Label>
+                    <Label Height="33" Margin="279,0,282,119" Name="lblAssetImage" VerticalAlignment="Bottom">Asset Image</Label>
+                    <Button Height="23" Margin="279,0,280,54.56" Name="btnBrowseImage" VerticalAlignment="Bottom" IsEnabled="False" Click="btnBrowseImage_Click" TabIndex="12">Browse Image</Button>
+                    <Border HorizontalAlignment="Right" Margin="0,0,82,38" Name="borderAssetImage" Width="128" BorderThickness="2" BorderBrush="Black" Height="114" VerticalAlignment="Bottom">
+                        <Image Height="106" Name="imageAssetPic" Stretch="Fill" Width="122" Source=".\IconImages\noImage.png" />
+                    </Border>
+                    <ComboBox HorizontalAlignment="Left" Margin="122,136,0,0" Name="cmbAssetCategory" Width="120" Height="23.04" VerticalAlignment="Top" TabIndex="6" BorderBrush="BlueViolet" Background="LightSteelBlue" IsEnabled="False" Foreground="Black" IsReadOnly="False">
+                        <ComboBoxItem Name="cbiFixed">Fixed</ComboBoxItem>
+                        <ComboBoxItem Name="cbiMovable">Movable</ComboBoxItem>
+                        <ComboBoxItem Name="cbiPortable">Portable</ComboBoxItem>
+                    </ComboBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Asset Status" Name="tabItemAssetStatus">
+                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Label HorizontalAlignment="Left" Margin="20,0,0,94" Name="lblTagExpiry" Width="93" Height="31.04" VerticalAlignment="Bottom">Tag Expiry</Label>
+                    <Label Height="23" HorizontalAlignment="Left" Margin="20,61.04,0,0" Name="lblAssetStatus" VerticalAlignment="Top" Width="83">Asset Status</Label>
+                    <Label Height="37" HorizontalAlignment="Left" Margin="20,108,0,0" Name="lblAssetLastChecked" VerticalAlignment="Top" Width="118">Asset last checked</Label>
+                    <TextBox IsReadOnly="True" Margin="183,155,0,151" MaxLength="20" Name="textBoxAssetLastLocation" TabIndex="19" HorizontalAlignment="Left" Width="112" />
+                    <Label HorizontalAlignment="Left" Margin="20,155,0,143" Name="lblAssetLastLoc" Width="118">Asset last location</Label>
+                    <TextBox IsReadOnly="True" Margin="183,0,0,102" MaxLength="30" Name="textBoxTagExpiry" TabIndex="20" HorizontalAlignment="Left" Width="128" Height="23.04" VerticalAlignment="Bottom" />
+                    <Label Height="31" HorizontalAlignment="Right" Margin="0,108,178,0" Name="lblAssetAlarms" VerticalAlignment="Top" Width="143">Asset Alarms</Label>
+                    <TextBox Height="23.04" IsReadOnly="True" Margin="0,108,44,0" MaxLength="10" Name="textBoxAssetAlarms" TabIndex="22" VerticalAlignment="Top" HorizontalAlignment="Right" Width="112" />
+                    <TextBox Height="23.04" IsReadOnly="True" Margin="0,63.04,24,0" MaxLength="30" Name="textBoxAssetMaintDue" TabIndex="21" VerticalAlignment="Top" HorizontalAlignment="Right" Width="132" />
+                    <Label Height="23.04" HorizontalAlignment="Right" Margin="0,61,162,0" Name="lblAssetMaintDue" VerticalAlignment="Top" Width="157">Asset Maintenance Due</Label>
+                    <TextBox HorizontalAlignment="Right" IsReadOnly="True" Margin="0,161,15,94" MaxLength="50" Name="textBoxAssetComments" TabIndex="23" Width="182" TextWrapping="WrapWithOverflow" />
+                    <Label Margin="0,155,210,143" Name="lblAssetComments" HorizontalAlignment="Right" Width="109">Asset Comments</Label>
+                    <TextBlock Background="LightBlue" Height="38.04" Margin="10,10,144,0" Name="textBlockAssetStatusNote" Text="Asset Status: Notifies the asset service conditions including tag information, asset alerts and other valuable information." TextWrapping="WrapWithOverflow" VerticalAlignment="Top" />
+                    <ComboBox Height="23" Margin="183,61.04,0,0" Name="cmbAssetStatus" VerticalAlignment="Top" HorizontalAlignment="Left" Width="121" IsEnabled="False" TabIndex="17" Foreground="Black" BorderBrush="Crimson" Background="LightYellow">
+                        <ComboBoxItem Name="cbiOK">OK</ComboBoxItem>
+                        <ComboBoxItem Name="cbiNew">NEW</ComboBoxItem>
+                        <ComboBoxItem Name="cbiServiced">SERVICED</ComboBoxItem>
+                        <ComboBoxItem Name="cbiRepair">REPAIR</ComboBoxItem>
+                        <ComboBoxItem Name="cbiFault">FAULT</ComboBoxItem>
+                        <ComboBoxItem Name="cbiTransit">TRANSIT</ComboBoxItem>
+                    </ComboBox>
+                    <TextBox Height="23.04" HorizontalAlignment="Left" IsReadOnly="True" Margin="183,110,0,0" MaxLength="30" Name="textBoxAssetLastChecked" TabIndex="18" VerticalAlignment="Top" Width="129" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Button Margin="0,0,217,46" Name="btnDeleteAsset" TabIndex="15" Height="23.04" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="102" IsEnabled="False" Click="btnDeleteAsset_Click">Delete Asset</Button>
+        <Button Height="23" HorizontalAlignment="Right" Margin="0,0,120,46" Name="btnCancel" TabIndex="16" VerticalAlignment="Bottom" Width="76" IsCancel="False" Click="btnCancel_Click">Cancel</Button>
+        <TextBlock Background="LightYellow" FontSize="11" FontWeight="Bold" Height="21" HorizontalAlignment="Right" Margin="0,17.14,33,0" Name="textBlockTagNotifyMessage" Text="tagNotifyMessage" TextAlignment="Center" TextWrapping="WrapWithOverflow" VerticalAlignment="Top" Visibility="Hidden" Width="163" />
+    </Grid>
+</Window>

@@ -1,0 +1,47 @@
+﻿<Window x:Class="ZTraka_App.AlertNotificationSettings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Alert Notification Settings" Height="546" Width="701" Name="alertNotifyWindow" WindowStyle="ToolWindow" Loaded="alertNotifyWindow_Loaded" WindowStartupLocation="CenterScreen" Icon=".\IconImages\reportNotify.png">
+    
+    <Grid>
+        <GroupBox Header="Alert Settings" Margin="12,31,35,0" Name="groupBoxAlertSettings" Height="191" VerticalAlignment="Top">
+            <Grid>
+                <Label Height="28" Margin="4,2,301,0" Name="lblSetAlertsOn" VerticalAlignment="Top" FontSize="13" FontWeight="Bold">Set alerts on the following actions or operations:</Label>
+                <CheckBox Height="16" Name="checkBoxAssetUpdates" Margin="229,66,290,0" VerticalAlignment="Top" IsEnabled="False">Asset Updates</CheckBox>
+                <CheckBox Margin="229,0,290,56" Name="checkBoxAssetAdded" IsEnabled="False" Height="15.928" VerticalAlignment="Bottom">Asset Added</CheckBox>
+                <CheckBox Margin="229,0,290,27" Name="checkBoxAssetDeleted" Height="16.04" VerticalAlignment="Bottom" IsEnabled="False">Asset Deleted</CheckBox>
+                <CheckBox Height="16" HorizontalAlignment="Left" Margin="16,66,0,0" Name="checkBoxAssetsMovingINOut" VerticalAlignment="Top" Width="207" IsChecked="True" IsEnabled="True">Assets moving In and Out of Range</CheckBox>
+                <CheckBox HorizontalAlignment="Left" Margin="16,0,0,56" Name="checkBoxAssetTagExpiry" Width="120" IsChecked="True" IsEnabled="True" Height="17.926" VerticalAlignment="Bottom">Asset Tag Expiry</CheckBox>
+                <CheckBox HorizontalAlignment="Left" Margin="16,0,0,29" Name="checkBoxAssetMaintDue" Width="149" IsChecked="True" Height="16.04" VerticalAlignment="Bottom" IsEnabled="True">Asset Maintenance Due</CheckBox>
+                <CheckBox Height="16" Margin="0,66,174,0" Name="checkBoxUserUpdates" VerticalAlignment="Top" HorizontalAlignment="Right" Width="101" IsEnabled="False">User Updates</CheckBox>
+                <CheckBox Margin="0,0,183,49" Name="checkBoxUserAdded" HorizontalAlignment="Right" Width="92" IsEnabled="False" Height="23" VerticalAlignment="Bottom">User Added</CheckBox>
+                <CheckBox Margin="0,0,174,27" Name="checkBoxUserDeleted" Height="16.04" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="101" IsEnabled="False">User Deleted</CheckBox>
+                <CheckBox Height="16" HorizontalAlignment="Right" Margin="0,66,6,0" Name="checkBoxReaderLocUpdate" VerticalAlignment="Top" Width="152" IsEnabled="False">Reader Location Update</CheckBox>
+                <CheckBox Height="16" HorizontalAlignment="Right" Margin="0,0,62,56" Name="checkBoxReaderAdded" VerticalAlignment="Bottom" Width="96" IsEnabled="False">Reader Added</CheckBox>
+                <CheckBox HorizontalAlignment="Right" Margin="0,0,49,27" Name="checkBoxReaderRemoved" Width="109" Height="16.04" VerticalAlignment="Bottom" IsEnabled="False">Reader Deleted</CheckBox>
+                <CheckBox Height="16" Margin="6,38,0,0" Name="checkBoxCriticalAssetParams" VerticalAlignment="Top" HorizontalAlignment="Left" Width="159" IsChecked="True" Checked="checkBoxCriticalAssetParams_Checked" Unchecked="checkBoxCriticalAssetParams_Unchecked" TabIndex="1">Critical Asset Parameters</CheckBox>
+                <CheckBox Height="16" Margin="210,36,0,0" Name="checkBoxAssetOptions" VerticalAlignment="Top" HorizontalAlignment="Left" Width="109" Checked="checkBoxAssetOptions_Checked" Unchecked="checkBoxAssetOptions_Unchecked" TabIndex="2">Asset Options</CheckBox>
+                <CheckBox Height="16" HorizontalAlignment="Left" Margin="336,38,0,0" Name="checkBoxUserOptions" VerticalAlignment="Top" Width="96" Checked="checkBoxUserOptions_Checked" Unchecked="checkBoxUserOptions_Unchecked" TabIndex="3">User Options</CheckBox>
+                <CheckBox Height="16" HorizontalAlignment="Right" Margin="0,38,62,0" Name="checkBoxReaderOptions" VerticalAlignment="Top" Width="120" Checked="checkBoxReaderOptions_Checked" Unchecked="checkBoxReaderOptions_Unchecked" TabIndex="4">Reader Options</CheckBox>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Notification Settings" Height="194" Margin="18,0,29,83" Name="groupBoxNotifySettings" VerticalAlignment="Bottom">
+            <Grid>
+                <CheckBox Height="16" Margin="17,42,0,0" Name="checkBoxEmailOptions" VerticalAlignment="Top" HorizontalAlignment="Left" Width="190" Checked="checkBoxEmailOptions_Checked" Unchecked="checkBoxEmailOptions_Unchecked" TabIndex="5">Send email to application user</CheckBox>
+                <CheckBox HorizontalAlignment="Left" Margin="39,66,0,0" Name="checkBoxEmailAdmin" Width="168" Height="16.04" VerticalAlignment="Top" IsEnabled="False">Send email to super admin</CheckBox>
+                <CheckBox HorizontalAlignment="Left" Margin="17,0,0,61" Name="checkBoxSendSMSUser" Width="156" Height="16.04" VerticalAlignment="Bottom" Checked="checkBoxSendSMSUser_Checked" Unchecked="checkBoxSendSMSUser_Unchecked" TabIndex="6">Trigger SMS alert to user</CheckBox>
+                <CheckBox Margin="279,64,221,0" Name="checkBoxScannedAssets" Height="16.04" VerticalAlignment="Top" IsChecked="True" TabIndex="12">Scanned Assets</CheckBox>
+                <CheckBox Height="16" HorizontalAlignment="Left" Margin="-294,0,0,-137" Name="checkBox6" VerticalAlignment="Bottom" Width="120">CheckBox</CheckBox>
+                <CheckBox Height="16" HorizontalAlignment="Left" Margin="39,0,0,34" Name="checkBoxSendSMSAdmin" VerticalAlignment="Bottom" Width="160" IsEnabled="False">Send SMS to super admin</CheckBox>
+                <Label FontSize="13" FontWeight="Bold" Height="28" Margin="10,10,0,0" Name="lblNotifySettings" VerticalAlignment="Top" HorizontalAlignment="Left" Width="149">Notification Options</Label>
+                <CheckBox Height="16" IsChecked="True" Margin="279,0,182,69" Name="checkBoxCriticalAParams" VerticalAlignment="Bottom">Critical Asset Parameters</CheckBox>
+                <CheckBox Height="16" Margin="262,42,0,0" Name="checkBoxLogs" VerticalAlignment="Top" Checked="checkBoxLogs_Checked" Unchecked="checkBoxLogs_Unchecked" IsChecked="True" TabIndex="7">Logs: Generate logs also for the following actions or operations:</CheckBox>
+                <TextBlock Background="DarkGray" Height="38.04" Margin="279,0,41,11.96" Name="textBlockLogNote" Text="Note: By default logs will be generated for all events mentioned above as well as critical app events" TextWrapping="WrapWithOverflow" VerticalAlignment="Bottom" />
+            </Grid>
+        </GroupBox>
+        <Button Height="23" Margin="155,0,435,30" Name="btnSaveSettings" VerticalAlignment="Bottom" Click="btnSaveSettings_Click" TabIndex="8">Save and Close</Button>
+        <Button Height="23" Margin="273,0,331,30" Name="btnCancel" VerticalAlignment="Bottom" Click="btnCancel_Click" TabIndex="9">Cancel</Button>
+        <Button Height="23" Margin="375,0,204,30" Name="btnRestoreDefaults" VerticalAlignment="Bottom" Click="btnRestoreDefaults_Click" TabIndex="10">Restore Defaults</Button>
+        <TextBlock Height="21" Margin="334.488,3.845,41,0" Name="textBlockAlertNotifyMessage" VerticalAlignment="Top" Text="alertNotifyMessage" Background="LightYellow" TextWrapping="WrapWithOverflow" TextAlignment="Center" FontWeight="Bold" FontSize="11" Visibility="Hidden" />
+    </Grid>
+</Window>

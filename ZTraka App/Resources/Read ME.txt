@@ -1,0 +1,27 @@
+Before Installing check the hardware and software requirements necessary for the application to run properly
+
+System Requirements :
+Minimum System Requirements:
+Microsoft's .NET Framework 3.5 SP1 
+Windows Installer 3.1 or above.
+
+Operating Systems:
+Windows 7
+Windows Vista SP1 (SP2 and Platform Update recommended)
+Windows XP SP3
+   
+Hardware requirements.
+
+800MHz processor (dual-core recommended)
+512MB of RAM
+1024 x 768 screen resolution
+15+ MB  of free hard drive space
+
+Please note that the application may use your hard drive to store temporary files related to some features for reporting and processing files.
+Due to this, actual disk space requirements will depend on the application settings and on the size of the object/file.
+
+Note 1*: App event logs are stored in AppData folder of the user. This folder may be hidden so user may need to enable the hidden files and folder settings in his computer in order to go through the path below.
+Eg. C:\Users\<username>\AppData\Roaming\ZigTraka\HATraka App Event Logs.log
+
+Note 2*: Sample app settings file (.zts) named myZTAppSettings.zts is given along with the application.
+User must fully understand each setting before modifying the file.

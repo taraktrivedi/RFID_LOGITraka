@@ -1,0 +1,23 @@
+﻿<Window x:Class="ZTraka_App.EmailSupport"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="EmailSupport" Height="445" Width="641" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" Icon= ".\IconImages\emailSupport.png">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFD2E5F3" Offset="0.326" />
+            <GradientStop Color="#FFE5EDF3" Offset="1.0" />
+        </LinearGradientBrush>
+
+    </Window.Background>
+
+    <Grid >
+        <Button Height="37" HorizontalAlignment="Left" Margin="126,0,0,45" Name="btnEmailSupportSendMail" VerticalAlignment="Bottom" Width="71" TabIndex="5" Click="btnEmailSupportSendMail_Click">Send Mail</Button>
+        <Button Height="37" Margin="229,0,0,45" Name="btnEmailSupportCancel" VerticalAlignment="Bottom" TabIndex="6" Click="btnEmailSupportCancel_Click" HorizontalAlignment="Left" Width="71">Cancel</Button>
+        <TextBox Height="23" Margin="126,77,0,0" Name="textBoxEmailSupportName" Foreground="Silver" VerticalAlignment="Top" HorizontalAlignment="Left" Width="121"  GotFocus="textBoxEmailSupportName_GotFocus" TabIndex="2" LostFocus="textBoxEmailSupportName_LostFocus">Name</TextBox>
+        <TextBox Height="23" Margin="126,135,0,0" Name="textBoxEmailSupportEmail" Foreground="Silver" VerticalAlignment="Top" HorizontalAlignment="Left" Width="121"  TabIndex="3" GotFocus="textBoxEmailSupportEmail_GotFocus" LostFocus="textBoxEmailSupportEmail_LostFocus">Email</TextBox>
+        <TextBox Margin="124,195,168,99" Name="textBoxEmailSupportMessage" Foreground="Silver" BorderThickness="1"  AutoWordSelection="True" AcceptsReturn="True" AcceptsTab="False" TextWrapping="WrapWithOverflow" TabIndex="4" GotFocus="textBoxEmailSupportMessage_GotFocus" LostFocus="textBoxEmailSupportMessage_LostFocus">Message</TextBox>
+        <Label Height="41" Margin="124,20,0,0" Name="lblContactUs" VerticalAlignment="Top" FontSize="20" HorizontalAlignment="Left" Width="123">Contact Us...</Label>
+        <Image Margin="271,11,26,0" Name="image1" Stretch="Fill" Height="66" VerticalAlignment="Top" Source=".\IconImages\LOGITraka.png"/>
+        <Image Height="80" HorizontalAlignment="Left" Margin="10,10,0,0" Name="image2" Source=".\IconImages\ZigTraka.png" Stretch="Fill" VerticalAlignment="Top" Width="94" />
+    </Grid>
+</Window>

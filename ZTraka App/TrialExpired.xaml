@@ -1,0 +1,48 @@
+﻿<Window x:Class="ZTraka_App.TrialExpired"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Application Expired" Height="310" Width="574" Icon="./IconImages/expired.png" AllowsTransparency="True" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" BorderThickness="7,7,19,19" Name="appExpiredWindow" Closed="appExpiredWindow_Closed" Topmost="False" Activated="appExpiredWindow_Activated">
+    <Window.Resources>
+
+
+
+        <Storyboard x:Key="OnMouseMove1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="image1">
+                <SplineDoubleKeyFrame KeyTime="0" Value="-0.098"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.5" Value="46.286"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:1" Value="-0.641"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded"/>
+        <EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="image1">
+            <BeginStoryboard x:Name="OnMouseMove1_BeginStoryboard" Storyboard="{StaticResource OnMouseMove1}"/>
+        </EventTrigger>
+    </Window.Triggers>
+    <Window.Effect>
+        <DropShadowEffect BlurRadius="15" Color="#FF161149" Opacity="0.71" ShadowDepth="30" Direction="312"/>
+    </Window.Effect>
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="#FF85BCE5" Offset="0.694"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid Height="237" Width="540">
+        <Image HorizontalAlignment="Right" Margin="0,12,105,0" Name="image1" Source=".\IconImages\ZigTraka.png" Stretch="Fill" Width="67" Height="67" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.098"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Label Height="46" Margin="60,32,229,0" Name="lblTrialExpiredAlert" VerticalAlignment="Top" FontSize="19" FontStretch="Normal" Foreground="White" BorderThickness="4" BorderBrush="Cyan" Background="Transparent">HATraka Application Alert !</Label>
+        <TextBlock Margin="60,99,89,55" Name="textBlockApplicationExpired" Foreground="White" TextWrapping="WrapWithOverflow" FontWeight="Bold" FontSize="19" Text="The HATraka application has expired. Please register and activate the product to enable full features and continued support." />
+        <Button Height="23" Margin="155,0,262,12" Name="buttonRegisterHere" VerticalAlignment="Bottom" Click="buttonRegisterHere_Click">Register and Activate</Button>
+        <Button Height="23" HorizontalAlignment="Right" Margin="0,0,194,12" Name="buttonExit" VerticalAlignment="Bottom" Width="49" Click="buttonExit_Click">Exit</Button>
+    </Grid>
+</Window>
